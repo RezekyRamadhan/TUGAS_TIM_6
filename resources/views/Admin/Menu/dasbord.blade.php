@@ -55,21 +55,21 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="border-start border-5 border-primary ps-5 mb-5">
-                        <h6 class="text-primary text-uppercase">About Us</h6>
-                        <h1 class="display-5 text-uppercase mb-0">We Keep Your Pets Happy All Time</h1>
+                        <h6 class="text-primary text-uppercase">Tentang Kami</h6>
+                        <h1 class="display-5 text-uppercase mb-0">Kami menyediakan barang elektronik apapun yang anda cari.</h1>
                     </div>
-                    <h4 class="text-body mb-4">Diam dolor diam ipsum tempor sit. Clita erat ipsum et lorem stet no labore lorem sit clita duo justo magna dolore</h4>
+                    <h4 class="text-body mb-4">Dapatkan penawaran harga terbaik pada toko kami.</h4>
                     <div class="bg-light p-4">
                         <ul class="nav nav-pills justify-content-between mb-3" id="pills-tab" role="tablist">
                             <li class="nav-item w-50" role="presentation">
                                 <button class="nav-link text-uppercase w-100 active" id="pills-1-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-1"
-                                    aria-selected="true">Our Mission</button>
+                                    aria-selected="true">Misi Kami</button>
                             </li>
                             <li class="nav-item w-50" role="presentation">
                                 <button class="nav-link text-uppercase w-100" id="pills-2-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-2"
-                                    aria-selected="false">Our Vission</button>
+                                    aria-selected="false">Visi Kami</button>
                             </li>
                         </ul>
                         <div class="tab-content" id="pills-tabContent">
@@ -92,8 +92,8 @@
     <div class="container-fluid py-5">
         <div class="container">
             <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
-                <h6 class="text-primary text-uppercase">Services</h6>
-                <h1 class="display-5 text-uppercase mb-0">Our Excellent Pet Care Services</h1>
+                <h6 class="text-primary text-uppercase">Layanan</h6>
+                <h1 class="display-5 text-uppercase mb-0">Menyediakan Berbagai Layanan</h1>
             </div>
             <div class="row g-5">
                 <div class="col-md-6">
