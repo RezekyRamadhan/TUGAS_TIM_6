@@ -74,4 +74,20 @@ class AdminController extends Controller
         $product->delete();
         return redirect()->route('product')->with('delete', 'Data berhasil di hapus');
     }
+
+    public function prd()
+    {
+            return view('Admin.Menu.prd',[
+            "produk" => Product::all(),
+
+        ]);
+    }
+
+    public function show($id)
+    {
+        return view('Admin.Menu.show',[
+            
+            "item" => Product::find($id),
+        ]);
+    }
  }
