@@ -23,9 +23,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/prd', function () {
-    return view('Admin.Menu.prd');
-});
+
 
 
 Route::get('/shopping_cart', function () {
@@ -38,6 +36,8 @@ Route::get('/shopping_cart', function () {
 
 Route::get('add_product', [AdminController::class, 'add_product'])->name('add_product');
 Route::post('add_product', [AdminController::class, 'store_add_product'])->name('store_product');
+Route::get('prd', [AdminController::class, 'prd'])->name('prd');
+Route::get('/prd/{id}/show', [AdminController::class, 'show'])->name('show');
 Route::get('product', [AdminController::class, 'product'])->name('product');
 Route::get('edit/{product}', [AdminController::class, 'edit'])->name('edit');
 Route::patch('update/{product}', [AdminController::class, 'update'])->name('update');
