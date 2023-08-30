@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Product;
-use App\Models\User;
 
 class AdminController extends Controller
 {
@@ -74,16 +73,5 @@ class AdminController extends Controller
     {
         $product->delete();
         return redirect()->route('product')->with('delete', 'Data berhasil di hapus');
-    }
-
-    public function add_cart(Request $request, $id)
-    {
-        $user_id = User::find($id);
-        $product_id = Product::find($id);
-
-        dd($request);
-
-
-
     }
  }

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Bonnota</title>
+    <title>PET SHOP - Pet Shop Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -13,7 +13,7 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@700&display=swap" rel="stylesheet">  
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -37,7 +37,7 @@
                 <div class="d-inline-flex align-items-center">
                     <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
                     <div class="text-start">
-                        <h6 class="text-uppercase mb-1">Kantor kami</h6>
+                        <h6 class="text-uppercase mb-1">Our Office</h6>
                         <span>123 Street, New York, USA</span>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                 <div class="d-inline-flex align-items-center">
                     <i class="bi bi-envelope-open fs-1 text-primary me-3"></i>
                     <div class="text-start">
-                        <h6 class="text-uppercase mb-1">Email kami</h6>
+                        <h6 class="text-uppercase mb-1">Email Us</h6>
                         <span>info@example.com</span>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                 <div class="d-inline-flex align-items-center">
                     <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
                     <div class="text-start">
-                        <h6 class="text-uppercase mb-1">Hubungi kami</h6>
+                        <h6 class="text-uppercase mb-1">Call Us</h6>
                         <span>+012 345 6789</span>
                     </div>
                 </div>
@@ -67,18 +67,18 @@
 
     <!-- Navbar Start -->
 
-
-
+    
+   
     <!-- Navbar End -->
     @include('Admin.Style.sidebar')
 
     @yield('Menu')
 
     @yield('border')
-
+   
     @yield('cart')
     <!-- Blog End -->
-
+    
 
     <!-- Footer Start -->
     <div class="container-fluid bg-light mt-5 py-5">

@@ -3,9 +3,7 @@
 @section('Menu')
 
    <!-- Products Start -->
-@foreach ($products as $product)
-    @include('Admin.Style.produk')
-@endforeach
+   @include('Admin.Style.produk')
 <!-- Products End -->
 
 
@@ -140,5 +138,5 @@
 </div>
 <!-- Pricing Plan End -->
 
-
+    
 @endsection

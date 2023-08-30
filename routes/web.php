@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
-use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,19 +24,13 @@ Route::get('/', function () {
 
 
 Route::get('/prd', function () {
-    return view('Admin.Menu.prd', [
-        'products' => Product::all()
-    ]);
+    return view('Admin.Menu.prd');
 });
 
 
 Route::get('/shopping_cart', function () {
     return view('Admin.Menu.shopping_cart');
 });
-
-Route::post('cart/{id}', [AdminController::class, 'add_cart']);
-Route::get('carts', [AdminController::class, 'carts']);
-
 
 
 

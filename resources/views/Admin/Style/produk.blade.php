@@ -7,12 +7,12 @@
         <div class="owl-carousel product-carousel">
             <div class="pb-5">
                 <div class="product-item position-relative bg-light d-flex flex-column text-center">
-                    <img class="img-fluid mb-4" src="{{url('storage/'.$porduct->image)}}" alt="">
+                    <img class="img-fluid mb-4" src="img/product-1.png" alt="">
                     <h6 class="text-uppercase">Quality Pet Foods</h6>
                     <h5 class="text-primary mb-0">$199.00</h5>
                     <div class="btn-action d-flex justify-content-center">
                         <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-cart"></i></a>
-                        <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></a>
+                        <a class="btn btn-primary py-2 px-3" href="/produk{{ $user->id }}"><i class="bi bi-eye"></i></a>
                     </div>
                 </div>
             </div>
