@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
+use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +26,10 @@ Route::get('/', function () {
 
 
 Route::get('/prd', function () {
-    return view('Admin.Menu.prd');
+    return view('Admin.Menu.prd', [
+        'products' => Product::all(),
+        'title' => 'products'
+    ]);
 });
 
 
@@ -42,3 +47,4 @@ Route::get('product', [AdminController::class, 'product'])->name('product');
 Route::get('edit/{product}', [AdminController::class, 'edit'])->name('edit');
 Route::patch('update/{product}', [AdminController::class, 'update'])->name('update');
 Route::delete('delete/{product}', [AdminController::class, 'delete'])->name('delete');
+Route::post('/cart/{id}', [UserController::class, 'add_cart']);

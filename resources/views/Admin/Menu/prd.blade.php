@@ -1,142 +1,66 @@
-@extends('index')
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{$title}}</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free HTML Templates" name="keywords">
+        <meta content="Free HTML Templates" name="description">
 
-@section('Menu')
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
 
-   <!-- Products Start -->
-   @include('Admin.Style.produk')
-<!-- Products End -->
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+<body>
 
 
-<!-- Offer Start -->
-<div class="container-fluid bg-offer my-5 py-5">
-    <div class="container py-5">
-        <div class="row gx-5 justify-content-start">
-            <div class="col-lg-7">
-                <div class="border-start border-5 border-dark ps-5 mb-5">
-                    <h6 class="text-dark text-uppercase">Special Offer</h6>
-                    <h1 class="display-5 text-uppercase text-white mb-0">Save 50% on all items your first order</h1>
+    @include('Admin.Style.sidebar')
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
+                <h6 class="text-primary text-uppercase">Products</h6>
+                <h1 class="display-5 text-uppercase mb-0">Products For Your Best Friends</h1>
+            </div>
+            <div class="d-flex">
+                @foreach ($products as $product)
+                <div class="pb-5 m-3">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="img/product-1.png" alt="">
+                        <h6 class="text-uppercase">{{$product->name}}</h6>
+                        <h5 class="text-primary mb-0">{{$product->price}}</h5>
+                        <img src="{{url('storage/'.$product->image)}}" alt="" height="100px" width="100px">
+                        <div class="btn-action d-flex justify-content-center">
+                            <form action="/cart/{{$product->id}}" method="post">
+                                @csrf
+                                <button class="btn btn-primary py-2 px-3" id="keranjang"><i class="bi bi-cart"></i></button>
+                            </form>
+                            <form action="" method="post">
+                                <button class="btn btn-primary py-2 px-3"><i class="bi bi-eye"></i></button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-white mb-4">Eirmod sed tempor lorem ut dolores sit kasd ipsum. Dolor ea et dolore et at sea ea at dolor justo ipsum duo rebum sea. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo lorem. Elitr ut dolores magna sit. Sea dolore sed et.</p>
-                <a href="" class="btn btn-light py-md-3 px-md-5 me-3">Shop Now</a>
-                <a href="" class="btn btn-outline-light py-md-3 px-md-5">Read More</a>
+                @endforeach
             </div>
         </div>
     </div>
-</div>
-<!-- Offer End -->
 
-
-<!-- Pricing Plan Start -->
-<div class="container-fluid py-5">
-    <div class="container">
-        <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
-            <h6 class="text-primary text-uppercase">Pricing Plan</h6>
-            <h1 class="display-5 text-uppercase mb-0">Competitive Pricing For Pet Services</h1>
-        </div>
-        <div class="row g-5">
-            <div class="col-lg-4">
-                <div class="bg-light text-center pt-5 mt-lg-5">
-                    <h2 class="text-uppercase">Basic</h2>
-                    <h6 class="text-body mb-5">The Best Choice</h6>
-                    <div class="text-center bg-primary p-4 mb-2">
-                        <h1 class="display-4 text-white mb-0">
-                            <small class="align-top"
-                                style="font-size: 22px; line-height: 45px;">$</small>49<small
-                                class="align-bottom" style="font-size: 16px; line-height: 40px;">/
-                                Mo</small>
-                        </h1>
-                    </div>
-                    <div class="text-center p-4">
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                            <span>HTML5 & CSS3</span>
-                            <i class="bi bi-check2 fs-4 text-primary"></i>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                            <span>Bootstrap v5</span>
-                            <i class="bi bi-check2 fs-4 text-primary"></i>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                            <span>Responsive Layout</span>
-                            <i class="bi bi-x fs-4 text-danger"></i>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                            <span>Browsers Compatibility</span>
-                            <i class="bi bi-x fs-4 text-danger"></i>
-                        </div>
-                        <a href="" class="btn btn-primary text-uppercase py-2 px-4 my-3">Order Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="bg-light text-center pt-5">
-                    <h2 class="text-uppercase">Standard</h2>
-                    <h6 class="text-body mb-5">The Best Choice</h6>
-                    <div class="text-center bg-dark p-4 mb-2">
-                        <h1 class="display-4 text-white mb-0">
-                            <small class="align-top"
-                                style="font-size: 22px; line-height: 45px;">$</small>99<small
-                                class="align-bottom" style="font-size: 16px; line-height: 40px;">/
-                                Mo</small>
-                        </h1>
-                    </div>
-                    <div class="text-center p-4">
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                            <span>HTML5 & CSS3</span>
-                            <i class="bi bi-check2 fs-4 text-primary"></i>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                            <span>Bootstrap v5</span>
-                            <i class="bi bi-check2 fs-4 text-primary"></i>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                            <span>Responsive Layout</span>
-                            <i class="bi bi-check2 fs-4 text-primary"></i>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                            <span>Browsers Compatibility</span>
-                            <i class="bi bi-x fs-4 text-danger"></i>
-                        </div>
-                        <a href="" class="btn btn-primary text-uppercase py-2 px-4 my-3">Order Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="bg-light text-center pt-5 mt-lg-5">
-                    <h2 class="text-uppercase">Extended</h2>
-                    <h6 class="text-body mb-5">The Best Choice</h6>
-                    <div class="text-center bg-primary p-4 mb-2">
-                        <h1 class="display-4 text-white mb-0">
-                            <small class="align-top"
-                                style="font-size: 22px; line-height: 45px;">$</small>149<small
-                                class="align-bottom" style="font-size: 16px; line-height: 40px;">/
-                                Mo</small>
-                        </h1>
-                    </div>
-                    <div class="text-center p-4">
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                            <span>HTML5 & CSS3</span>
-                            <i class="bi bi-check2 fs-4 text-primary"></i>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                            <span>Bootstrap v5</span>
-                            <i class="bi bi-check2 fs-4 text-primary"></i>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                            <span>Responsive Layout</span>
-                            <i class="bi bi-check2 fs-4 text-primary"></i>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                            <span>Browsers Compatibility</span>
-                            <i class="bi bi-check2 fs-4 text-primary"></i>
-                        </div>
-                        <a href="" class="btn btn-primary text-uppercase py-2 px-4 my-3">Order Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Pricing Plan End -->
-
-    
-@endsection
+    <script src="{{asset('js/cart.js')}}"></script>
+</body>
+</html>
